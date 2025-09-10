@@ -1,0 +1,12 @@
+name: Auto Trigger Every 2 Minutes
+
+on:
+  schedule:
+    - cron: "*/2 * * * *"   # Runs every 2 minutes
+
+jobs:
+  run-cron-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print timestamp
+        run: echo "Triggered at $(date)"
