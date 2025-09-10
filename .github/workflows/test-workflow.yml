@@ -1,8 +1,8 @@
-name: Auto Trigger Every 2 Minutes
+name: Auto Trigger Every Minute
 
 on:
   schedule:
-    - cron: "*/2 * * * *"   # Runs every 2 minutes
+    - cron: "* * * * *"   # Runs every minute
 
 jobs:
   run-cron-job:
