@@ -1,12 +1,12 @@
-name: Load test
-on:
-  schedule:
-    - cron: '* * * * *'
+# name: Load test
+# on:
+#   schedule:
+#     - cron: '* * * * *'
 
-jobs:
-  load-test-home:
-    name: Run load test at
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print timestamp
-        run: echo "Triggered at $(date)"
+# jobs:
+#   load-test-home:
+#     name: Run load test at
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Print timestamp
+#         run: echo "Triggered at $(date)"
