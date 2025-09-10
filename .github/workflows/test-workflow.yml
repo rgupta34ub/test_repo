@@ -1,8 +1,25 @@
-# name: Auto Trigger Every Minute
+# # name: Auto Trigger Every Minute
+
+# # on:
+# #   schedule:
+# #     - cron: "* * * * *"   # every minuteb
+
+# # jobs:
+# #   build:
+# #     runs-on: ubuntu-latest
+# #     steps:
+# #       - name: Print timestamp
+# #         run: |
+# #           echo "Triggered at $(date -u)"a
+# #           echo "Workflow triggered by: ${{ github.event_name }}"
+
+
+# name: Auto Trigger Every 5 Minutes
 
 # on:
 #   schedule:
-#     - cron: "* * * * *"   # every minuteb
+#     - cron: "*/20 * * * *"   # every 5 minutes
+#   workflow_dispatch:         # optional, so you can run manually too
 
 # jobs:
 #   build:
@@ -10,22 +27,5 @@
 #     steps:
 #       - name: Print timestamp
 #         run: |
-#           echo "Triggered at $(date -u)"a
+#           echo "Triggered at $(date -u)"
 #           echo "Workflow triggered by: ${{ github.event_name }}"
-
-
-name: Auto Trigger Every 5 Minutes
-
-on:
-  schedule:
-    - cron: "*/20 * * * *"   # every 5 minutes
-  workflow_dispatch:         # optional, so you can run manually too
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print timestamp
-        run: |
-          echo "Triggered at $(date -u)"
-          echo "Workflow triggered by: ${{ github.event_name }}"
