@@ -2,11 +2,14 @@ name: Auto Trigger Every Minute
 
 on:
   schedule:
-    - cron: "* * * * *"   # Runs every minute
+    - cron: "* * * * *"   # every minute
+  workflow_dispatch:       # manual run button in Actions tab
 
 jobs:
   run-cron-job:
     runs-on: ubuntu-latest
     steps:
       - name: Print timestamp
-        run: echo "Triggered at $(date)"
+        run: |
+          echo "Triggered at $(date -u)"
+          echo "Workflow triggered by: ${{ github.event_name }}"
