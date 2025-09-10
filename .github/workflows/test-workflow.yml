@@ -2,11 +2,10 @@ name: Auto Trigger Every Minute
 
 on:
   schedule:
-    - cron: "* * * * *"   # every minute
-  workflow_dispatch:       # manual run button in Actions tab
+    - cron: "* * * * *"   # every minuteb
 
 jobs:
-  run-cron-job:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Print timestamp
