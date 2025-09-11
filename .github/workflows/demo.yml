@@ -9,7 +9,7 @@ jobs:
   run-hello:
     runs-on: ubuntu-latest
     env:
-      EXAMPLE_KEY: ${{ secrets.EXAMPLE_KEY }}
+      EXAMPLE_TOKEN: ${{ secrets.EXAMPLE_TOKEN }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
