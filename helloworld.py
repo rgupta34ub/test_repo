@@ -2,7 +2,7 @@
 import os
 import sys
 
-EXAMPLE_KEY = os.environ.get("EXAMPLE_KEY")
+EXAMPLE_KEY = os.environ.get("EXAMPLE_TOKEN")
 if not EXAMPLE_KEY:
     print("ERROR: EXAMPLE_KEY environment variable is not set.", file=sys.stderr)
     sys.exit(1)
